@@ -1,0 +1,27 @@
+#include<stdio.h>
+#include<conio.h>
+#include <iostream.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main() {
+    srand((unsigned int)time(NULL));
+    int randomNumber = rand() % 100 + 1;
+    int userGuess = 0;
+    cout << "WELCOME TO THE NUMBER GUESSING GAME!!!!\n";
+    cout << "I have chosen a number between 1 and 100. Can you guess what it is?\n";
+    while (userGuess != randomNumber) {
+  	  cout << "Enter your guess: ";
+       	  cin >> userGuess;
+          if (userGuess < randomNumber) 
+          	  std::cout << "Too low! Try again.\n";
+          else if (userGuess > randomNumber) 
+        	   std::cout << "Too high! Try again.\n";
+          else 
+          	  std::cout << "Congratulations! You've guessed the correct number.\n";
+        
+    }
+    
+    return 0;
+}
+
